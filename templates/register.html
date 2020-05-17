@@ -1,0 +1,36 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{% static 'register.css'%}">
+  </head>
+  <body>
+    <div id="firstdiv">
+      <h1>REGISTRATION FORM</h1>
+      <div id="seconddiv">
+        <form class="" action="/submit" method="post">
+          {%csrf_token%}
+        <h4 id="fn">First Name: <input type="text" name="first_name" placeholder="enter your first name"></h4>
+        <h4 id="mn">Middle Name: <input type="text" name="middle_name" placeholder="enter your middle name"></h4>
+        <h4 id="ln">Last Name: <input type="text" name="last_name" placeholder="enter your last name"></h4>
+        <h4 id="pn">Mobile Number: <input type="text" name="mobile_number" placeholder="enter your mobile number"></h4>
+        <h4  id="cn">Collage Name: <input type="text" name="collage_name" placeholder="enter your collage name"></h4>
+        <h4 id="gen">Gender:<br> Male:<input type="radio" name="gender" value="male">Female:<input type="radio" name="gender" value="female"></h4>
+        <h4 id="hob">Hobbies </h4>
+        <h4>
+         Programming:<input type="checkbox" name="programming" value="">
+         Singing:<input type="checkbox" name="singing" value="">
+         Dancing:<input type="checkbox" name="dancing" value="">
+         Playing:<input type="checkbox" name="playing" value="">
+         </h4>
+           <input type="submit" name="" value="submit">
+           <h1>{{msg}}</h1>
+
+           </form>
+         </div>
+
+      </div>
+  </body>
+</html>
